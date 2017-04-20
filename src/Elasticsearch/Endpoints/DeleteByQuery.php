@@ -51,9 +51,9 @@ class DeleteByQuery extends AbstractEndpoint
             );
         }
 
-        $uri = "/{$this->index}/_delete_by_query?conflicts=proceed";
+        $uri = "/{$this->index}/_delete_by_query";
         if ($this->type) {
-            $uri = "/{$this->index}/{$this->type}/_delete_by_query?conflicts=proceed";
+            $uri = "/{$this->index}/{$this->type}/_delete_by_query";
         }
 
         return $uri;
